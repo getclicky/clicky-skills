@@ -1,5 +1,5 @@
 ---
-name: clicky-install-tracking
+name: clicky-install
 description: Install, fix, or verify Clicky web analytics tracking on a website. Use when the user wants to add Clicky to a site, sees zero or wrong visitors, or asks whether tracking works. Covers the one-line async script, tag managers, CSP, SPA/framework setups, and the ad-blocker proxy.
 ---
 

@@ -55,4 +55,4 @@ Any report narrows to matching visitors via `filter`. Plain text = match items w
 - API reference (all types + params): https://clicky.com/help/api
 - Agent procedures: https://clicky.com/help/agents
 - Machine-readable index: https://clicky.com/llms.txt
-- Installing the tracking code is a separate skill: `clicky-install-tracking`
+- Installing the tracking code is a separate skill: `clicky-install`

@@ -9,20 +9,21 @@ Zed, ...) loads when the task matches. Read-only: nothing here can change your C
 | Skill | What it does |
 |---|---|
 | [clicky-analytics](clicky-analytics/) | Read your traffic: visitors, pages, referrers, goals, ecommerce, uptime. Report types, dates, filtering, segmentation, etiquette. |
-| [clicky-install-tracking](clicky-install-tracking/) | Install, fix, or verify the Clicky tracking code: the one-line script, tag managers, CSP, SPA setups, ad blockers, API verification. |
+| [clicky-install](clicky-install/) | Install, fix, or verify the Clicky tracking code: the one-line script, tag managers, CSP, SPA setups, ad blockers, API verification. |
+| [clicky-custom](clicky-custom/) | Custom tracking beyond page views: goals + revenue, events, custom visitor data, utm_custom, SPA route tracking, CSS link tagging, server-side logging via in.php. |
 
 ## Install
 
 **Claude Code** — drop a folder into your skills directory:
 
 ```sh
-git clone https://github.com/getclicky/clicky-skills && cp -r clicky-skills/clicky-analytics ~/.claude/skills/
+git clone https://github.com/getclicky/clicky-skills && cp -r clicky-skills/* ~/.claude/skills/
 ```
 
 **Zed / agents using the shared convention** — into `.agents/skills/` (project) or `~/.agents/skills/` (global):
 
 ```sh
-git clone https://github.com/getclicky/clicky-skills && cp -r clicky-skills/* .agents/skills/
+git clone https://github.com/getclicky/clicky-skills && cp -r clicky-skills/* ~/.agents/skills/
 ```
 
 **Via the skills CLI** ([npx skills](https://skills.sh)):
