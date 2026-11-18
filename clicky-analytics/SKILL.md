@@ -14,7 +14,7 @@ Authentication is a single per-account **userkey** (found or generated at https:
 
 ## Quick start
 
-1. Call the `sites` tool (or `POST https://clicky.com/api/account/sites` with the userkey; add `stats=1` to get today's summary numbers for every site in the same call). Returns every site on the account: `site_id`, `sitekey`, hostname, nickname, timezone, visitors online now and today.
+1. Call the `sites` tool (or `POST https://clicky.com/api/account/sites` with the userkey). Returns every site on the account: `site_id`, `sitekey`, hostname, nickname, timezone, visitors online now and today; add `stats=1` to get all of today's summary numbers ("the basics") returned.
 2. Pick the site the user means (match by hostname or nickname; ask if ambiguous).
 3. Call `analytics` with that site's `site_id` + `sitekey`, a `type`, and a `date`.
 
@@ -35,7 +35,7 @@ Results come back as markdown tables by default (cheapest in tokens). Pass `outp
 
 ## Filtering and segments
 
-Any report narrows to matching visitors via `filter`. Plain text = match items within the report. A value containing `=` is a query tail appended to the call verbatim (URL-encode `&`, `=`, and spaces):
+Any report narrows to matching visitors via `filter`. Plain text = match items within the report. A value containing `=` is a query tail appended to the call verbatim (URL-encode parameters containing `&`, `=`, and spaces):
 
 - `filter="country=us&href=%2Fpricing"` - visitors from the US on /pricing
 - Filter params: `country, region, city, domain, link, href, search, campaign, goal, source, org, hostname, uid, ip_address, session_id, browser, os, hardware, language, num_actions, time, action_type, custom=KEY:VALUE`
