@@ -14,7 +14,7 @@ Authentication is a single per-account **userkey** (found or generated at https:
 
 ## Quick start
 
-1. Call the `sites` tool (or `POST https://clicky.com/api/account/sites` with the userkey). Returns every site on the account: `site_id`, `sitekey`, hostname, nickname, timezone, visitors online now and today; add `stats=1` to get all of today's summary numbers ("the basics") returned.
+1. Call the `sites` tool (or `POST https://clicky.com/api/account/sites` with the userkey). Returns every site on the account: `site_id`, `sitekey`, hostname, nickname, timezone, visitors online now and today. Add `stats=1` to get *all* of today's summary numbers too ("the basics", the same keys as `type=summary`: `visitors`, `visitors-online`, `actions`, `bounce-rate`, ...). Purely additive: the legacy `visitors_online`/`visitors_today` pair is always there as well, so in stats=1 output `visitors` equals `visitors_today` and `visitors-online` equals `visitors_online`. Prefer the hyphenated names in anything you write.
 2. Pick the site the user means (match by hostname or nickname; ask if ambiguous).
 3. Call `analytics` with that site's `site_id` + `sitekey`, a `type`, and a `date`.
 
